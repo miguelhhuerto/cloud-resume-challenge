@@ -6,6 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        /* Portfolio Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        /* Project Card */
+        .project-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+        }
+
+        /* Project Links */
+        .project-card a {
+            text-decoration: none;
+            color: #9b59b6; /* Theme color */
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .project-card a:hover {
+            color: #d2b4de; /* Lighter hover color */
+        }
+
+        /* Back Button */
+        .back-button {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px 20px;
+            background: #9b59b6;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .back-button:hover {
+            background: #d2b4de;
+        }
+    </style>
 </head>
 <body class="is-preload">
 
@@ -21,13 +77,87 @@
                 <h1 class="major">Portfolio</h1>
                 <p>Click on a project title to view the corresponding PDF Documentation.</p>
 
-                <ul>
-                    <li><a href="assets/projects/project1.pdf" target="_blank">Disaster Information Forum</a></li>
-                    <li><a href="assets/projects/project2.pdf" target="_blank">Online Betting and Shop Website</a></li>
-                    <li><a href="assets/projects/project3.pdf" target="_blank">AWS Cloud Automation</a></li>
-                </ul>
+                <!-- Portfolio Grid -->
+                <div class="portfolio-grid">
+                    <div class="project-card">
+                        <a href="assets/projects/netflix_clone.pdf" target="_blank">
+                            <span>📺</span> DevSecOps Pipeline: Deploy Netflix Clone
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <a href="assets/projects/tbr_aws.pdf" target="_blank">
+                            <span>📊</span> Visualizing Marathon Data Using AWS QuickSight
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <a href="assets/projects/terraform_project_simple.pdf" target="_blank">
+                            <span>🌍</span> Simple Website Hosting with AWS & Terraform
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <a href="assets/projects/2048.pdf" target="_blank">
+                            <span>🎮</span> DevOps Project - 2048 Game on AWS
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <a href="assets/projects/aws_memory_game.pdf" target="_blank">
+                            <span>🧠</span> AWS Project: Memory Game with CI/CD
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <a href="assets/projects/devops-codeartifact.pdf" target="_blank">
+                            <span>📦</span> Dependencies and CodeArtifact
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <a href="assets/projects/devops-codebuild.pdf" target="_blank">
+                            <span>🔨</span> Package an App with CodeBuild
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <a href="assets/projects/devops-codedeploy.pdf" target="_blank">
+                            <span>🚀</span> Deploy an App with CodeDeploy
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <a href="assets/projects/devops-github.pdf" target="_blank">
+                            <span>🐙</span> Connect a GitHub Repo with AWS
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <a href="assets/projects/devops-vscode.pdf" target="_blank">
+                            <span>☁️</span> Set Up a Web App in the Cloud
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <a href="assets/projects/lex1.pdf" target="_blank">
+                            <span>🤖</span> Build a Chatbot with Amazon Lex
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <a href="assets/projects/lex2.pdf" target="_blank">
+                            <span>📝</span> Build a Chatbot with Custom Slots
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <a href="assets/projects/lex3.pdf" target="_blank">
+                            <span>🔌</span> Connect a Chatbot with Lambda
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <a href="assets/projects/lex4.pdf" target="_blank">
+                            <span>💾</span> Save User Info with Chatbot
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <a href="assets/projects/lex5.pdf" target="_blank">
+                            <span>🛠️</span> Build a Chatbot with Multiple Slots
+                        </a>
+                    </div>
+                </div>
 
-                <button onclick="window.history.back();">Back</button>
+                <!-- Back Button -->
+                <a href="index.html" class="back-button">Back</a>
             </div>
         </section>
     </div>
