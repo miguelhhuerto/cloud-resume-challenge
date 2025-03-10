@@ -2561,17 +2561,43 @@ input, select, textarea {
 
 /* Image */
 
-	.image {
-		border-radius: 0.25em;
-		border: 0;
-		display: inline-block;
-		position: relative;
-	}
+.image {
+    border-radius: 0.25em;
+    border: 0;
+    display: inline-block;
+    position: relative;
+    overflow: hidden; /* Prevents overlay from overflowing */
+}
 
-		.image img {
-			border-radius: 0.25em;
-			display: block;
-		}
+.image img {
+    border-radius: 0.25em;
+    display: block;
+    filter: brightness(0.85); /* Slightly dark by default */
+    transition: filter 0.3s ease-in-out; /* Smooth transition */
+}
+
+.image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(130, 84, 205, 0.3) 0%, rgba(50, 50, 50, 0.6) 100%);
+    opacity: 0.5; /* Slight filter by default */
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in effect */
+    pointer-events: none; /* Ensures clicks go through */
+}
+
+/* Darken effect on hover */
+.image:hover img {
+    filter: brightness(0.6); /* Gets darker */
+}
+
+.image:hover::after {
+    opacity: 0.8; /* Gradient overlay gets darker */
+}
+
 
 		.image.left, .image.right {
 			max-width: 40%;
